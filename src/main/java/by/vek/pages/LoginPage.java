@@ -1,0 +1,100 @@
+package by.vek.pages;
+
+import by.vek.utils.Waiters;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import static org.testng.Assert.assertEquals;
+
+public class LoginPage extends BasePage {
+
+    @FindBy(css = "#login-email")
+    private WebElement emailInputField;
+    @FindBy(css = "#login-password")
+    private WebElement passwordInputField;
+    @FindBy(css = "button[data-testid='loginSubmit']")
+    private WebElement submitBtn;
+    @FindBy(css = "div[class='FieldWrapper-module__wrapper styles_email__BTXT4'] .ErrorMessage-module__message")
+    private WebElement emailErrorMessage;
+    @FindBy(css = "div[class='FieldWrapper-module__wrapper'] .ErrorMessage-module__message")
+    private WebElement passwordErrorMessage;
+
+    public LoginPage(WebDriver driver) {
+        super(driver);
+        PageFactory.initElements(driver, this);
+    }
+
+
+    public void typeEmailByInputField(String login) {
+        Waiters.waitElementIsVisible(driver, emailInputField);
+        emailInputField.click();
+        emailInputField.sendKeys(login);
+    }
+
+    public void typePasswordByInputField(String password) {
+        Waiters.waitElementIsVisible(driver, passwordInputField);
+        passwordInputField.click();
+        passwordInputField.sendKeys(password);
+    }
+
+    public StartPage clickBySubmitBtn() {
+        Waiters.waitElementIsClickable(driver, submitBtn);
+        submitBtn.click();
+        return new StartPage(driver);
+    }
+
+
+    public Boolean isEmailErrorMessageEqual(String emailMessage) {
+        Waiters.waitElementIsVisible(driver, emailErrorMessage);
+        String emaailString = emailErrorMessage.getText();
+        System.out.println(emailErrorMessage.getText());
+        return emaailString.equals(emailMessage);
+    }
+
+    public Boolean isPasswordErrorMessageEqual(String passwordMessage) {
+        Waiters.waitElementIsVisible(driver, passwordErrorMessage);
+        String passwordString = passwordErrorMessage.getText();
+        return passwordString.equals(passwordMessage);
+    }
+
+    public Boolean isPresentWebElementEmailErrorMessage() {
+        try {
+            Waiters.waitElementIsVisible(driver, emailErrorMessage);
+            return true;
+        } catch (NoSuchElementException | TimeoutException e) {
+            return false;
+        }
+    }
+
+    public Boolean isPresentWebElementPasswordErrorMessage() {
+        try {
+            Waiters.waitElementIsVisible(driver, passwordErrorMessage);
+            return true;
+        } catch (NoSuchElementException | TimeoutException e) {
+            return false;
+        }
+    }
+
+//    public Boolean verifyPresentWebElementPasswordErrorMessage() {
+//        try {
+//            driver.findElement(By.cssSelector("div[class='FieldWrapper-module__wrapper'] .ErrorMessage-module__message"));
+//            return true;
+//        } catch (NoSuchElementException e) {
+//            return false;
+//        }
+//    }
+
+
+
+//    public Boolean getErrorMessage(String emailMessage, String passwordMessage) {
+//        Waiters.waitElementIsVisible(driver, emailErrorMessage);
+//        Waiters.waitElementIsVisible(driver, passwordErrorMessage);
+//        String emaailString = emailErrorMessage.getText();
+//        String passwordString = passwordErrorMessage.getText();
+//        return emaailString.equals(emailMessage) & passwordString.equals(passwordMessage);
+//    }
+
+
+}
+

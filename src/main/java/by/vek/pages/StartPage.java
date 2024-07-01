@@ -1,11 +1,13 @@
 package by.vek.pages;
 
+import by.vek.utils.DriverManager;
 import by.vek.utils.Waiters;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.sql.DriverManager;
 
 public class StartPage extends BasePage {
 
@@ -18,58 +20,45 @@ public class StartPage extends BasePage {
     @FindBy(xpath = "//button[@name='button']")
     private WebElement closeBtnSaleCode;
 
-
     private final String url = "https://www.21vek.by/";
 
-    public StartPage(WebDriver driver) {
-        super(driver);
-        PageFactory.initElements(driver, this);
+    private static final Logger LOGGER = LogManager.getLogger(StartPage.class);
+
+    public StartPage() {
+        PageFactory.initElements(DriverManager.getDriver(), this);
     }
 
     public void openURL()  {
-        driver.get(url);
-//        Cookie setCookie = new Cookie("mindboxDeviceUUID", "f1603448-4e4d-4ea3-8aab-27b4fb082c59");
-//        driver.manage().addCookie(setCookie);
-//        driver.navigate().refresh();
+        DriverManager.getDriver().get(url);
+
         try {
-            Waiters.waitElementIsVisible(driver, acceptCookie);
+            Waiters.waitElementIsVisible(acceptCookie);
             if (acceptCookie.isDisplayed()) {
                 acceptCookie.click();
             }
         } catch (NoSuchElementException | TimeoutException e){
-            System.out.println("Кнопки кук нет");
+            LOGGER.info("Cookie button is missing");
         }
 
         try {
-            Waiters.waitElementIsVisible(driver, closeBtnSaleCode);
+            Waiters.waitElementIsVisible(closeBtnSaleCode);
             if (closeBtnSaleCode.isDisplayed()) {
                 closeBtnSaleCode.click();
             }
         } catch (NoSuchElementException | TimeoutException e) {
-            System.out.println("Кнопки закрыть код скидки нету");
+            LOGGER.info("Close button discount code is missing");
         }
-
-
     }
 
-//    public void openURL() {
-//        driver.get(url);
-//        Cookie cookie = new Cookie("JSESSIONID", "7459007A75979B766442FB3A7A13ED46");
-//
-//        driver.manage().addCookie(cookie);
-//
-//        driver.navigate().refresh();
-//
-//    }
 
     public void openAccountWindow() {
-        Waiters.waitElementIsClickable(driver, accountBtn);
+        Waiters.waitElementIsClickable(accountBtn);
         accountBtn.click();
     }
 
     public LoginPage clickByLoginBtn() {
-        Waiters.waitElementIsClickable(driver, loginBtn);
+        Waiters.waitElementIsClickable(loginBtn);
         loginBtn.click();
-        return new LoginPage(driver);
+        return new LoginPage();
     }
 }

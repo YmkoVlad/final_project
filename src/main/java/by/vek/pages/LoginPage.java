@@ -1,5 +1,6 @@
 package by.vek.pages;
 
+import by.vek.utils.DriverManager;
 import by.vek.utils.Waiters;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
@@ -20,47 +21,46 @@ public class LoginPage extends BasePage {
     @FindBy(css = "div[class='FieldWrapper-module__wrapper'] .ErrorMessage-module__message")
     private WebElement passwordErrorMessage;
 
-    public LoginPage(WebDriver driver) {
-        super(driver);
-        PageFactory.initElements(driver, this);
+    public LoginPage() {
+        PageFactory.initElements(DriverManager.getDriver(), this);
     }
 
 
     public void typeEmailByInputField(String login) {
-        Waiters.waitElementIsVisible(driver, emailInputField);
+        Waiters.waitElementIsVisible(emailInputField);
         emailInputField.click();
         emailInputField.sendKeys(login);
     }
 
     public void typePasswordByInputField(String password) {
-        Waiters.waitElementIsVisible(driver, passwordInputField);
+        Waiters.waitElementIsVisible(passwordInputField);
         passwordInputField.click();
         passwordInputField.sendKeys(password);
     }
 
     public StartPage clickBySubmitBtn() {
-        Waiters.waitElementIsClickable(driver, submitBtn);
+        Waiters.waitElementIsClickable(submitBtn);
         submitBtn.click();
-        return new StartPage(driver);
+        return new StartPage();
     }
 
 
     public Boolean isEmailErrorMessageEqual(String emailMessage) {
-        Waiters.waitElementIsVisible(driver, emailErrorMessage);
+        Waiters.waitElementIsVisible(emailErrorMessage);
         String emaailString = emailErrorMessage.getText();
         System.out.println(emailErrorMessage.getText());
         return emaailString.equals(emailMessage);
     }
 
     public Boolean isPasswordErrorMessageEqual(String passwordMessage) {
-        Waiters.waitElementIsVisible(driver, passwordErrorMessage);
+        Waiters.waitElementIsVisible(passwordErrorMessage);
         String passwordString = passwordErrorMessage.getText();
         return passwordString.equals(passwordMessage);
     }
 
     public Boolean isPresentWebElementEmailErrorMessage() {
         try {
-            Waiters.waitElementIsVisible(driver, emailErrorMessage);
+            Waiters.waitElementIsVisible(emailErrorMessage);
             return true;
         } catch (NoSuchElementException | TimeoutException e) {
             return false;
@@ -69,7 +69,7 @@ public class LoginPage extends BasePage {
 
     public Boolean isPresentWebElementPasswordErrorMessage() {
         try {
-            Waiters.waitElementIsVisible(driver, passwordErrorMessage);
+            Waiters.waitElementIsVisible(passwordErrorMessage);
             return true;
         } catch (NoSuchElementException | TimeoutException e) {
             return false;
@@ -88,8 +88,8 @@ public class LoginPage extends BasePage {
 
 
 //    public Boolean getErrorMessage(String emailMessage, String passwordMessage) {
-//        Waiters.waitElementIsVisible(driver, emailErrorMessage);
-//        Waiters.waitElementIsVisible(driver, passwordErrorMessage);
+//        Waiters.waitElementIsVisible(emailErrorMessage);
+//        Waiters.waitElementIsVisible(passwordErrorMessage);
 //        String emaailString = emailErrorMessage.getText();
 //        String passwordString = passwordErrorMessage.getText();
 //        return emaailString.equals(emailMessage) & passwordString.equals(passwordMessage);

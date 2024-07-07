@@ -5,21 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7c6b3ae-9027-424a-ae58-6a7fd0225b19" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/vek/enums/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/vek/pages/CartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/vek/service/CloseDiscountWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/add_to_cart/AddToCartTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/allure.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/enums/MessageLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/enums/MessageLoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/pages/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/pages/SearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/pages/StartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/pages/StartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/utils/Waiters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/utils/Waiters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/vek/api_test/AuthorizationAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/vek/api_test/AuthorizationAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/authorization/DataProviderLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/authorization/DataProviderLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/authorization/UserAuthorizationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/authorization/UserAuthorizationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/search/SearchProductByNameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/search/SearchProductByNameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +48,7 @@
     "TestNG.AuthorizationAPI.postLoginValidDataTest.executor": "Run",
     "TestNG.CartAPI.addProductToCart.executor": "Run",
     "TestNG.SearchProductByNameTest.authorizationUser.executor": "Debug",
+    "TestNG.SearchProductByNameTest.executor": "Run",
     "TestNG.SearchProductByNameTest.verifyAllProductByName.executor": "Run",
     "TestNG.SearchProductByNameTest.verifyProductByName.executor": "Run",
     "TestNG.UserAuthorization.startTest.executor": "Run",
@@ -78,7 +67,7 @@
     "last_opened_file_path": "C:/Users/Core/IdeaProjects/by.21vek"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.AddToCartTest.verifyAddProductToCart">
+  <component name="RunManager" selected="TestNG.SearchProductByNameTest">
     <configuration name="AddToCartTest.verifyAddProductToCart" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="by.21vek" />
       <extension name="coverage">
@@ -97,18 +86,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthorizationAPI.postLoginValidDataTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchProductByNameTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="by.21vek" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.vek.api_test.*" />
+          <option name="PATTERN" value="by.vek.ui_tests.search.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="by.vek.api_test" />
-      <option name="MAIN_CLASS_NAME" value="by.vek.api_test.AuthorizationAPI" />
-      <option name="METHOD_NAME" value="postLoginValidDataTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PACKAGE_NAME" value="by.vek.ui_tests.search" />
+      <option name="MAIN_CLASS_NAME" value="by.vek.ui_tests.search.SearchProductByNameTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -170,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.SearchProductByNameTest" />
         <item itemvalue="TestNG.AddToCartTest.verifyAddProductToCart" />
         <item itemvalue="TestNG.UserAuthorizationTest" />
         <item itemvalue="TestNG.SearchProductByNameTest.verifyAllProductByName" />
         <item itemvalue="TestNG.SearchProductByNameTest.verifyProductByName" />
-        <item itemvalue="TestNG.AuthorizationAPI.postLoginValidDataTest" />
       </list>
     </recent_temporary>
   </component>

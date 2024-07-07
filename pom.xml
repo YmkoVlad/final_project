@@ -12,10 +12,24 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <allure.version>2.24.0</allure.version>
+    <aspectj.version>1.9.22</aspectj.version>
   </properties>
 
-  <dependencies>
+  <!-- Add allure-bom to dependency management to ensure correct versions of all the dependencies are used -->
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-bom</artifactId>
+        <version>${allure.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
+  <dependencies>
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
@@ -87,6 +101,16 @@
       <version>7.10.1</version>
     </dependency>
 
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-testng</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>${aspectj.version}</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -107,8 +131,10 @@
         <version>3.2.5</version>
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>src/test/resources/testsuites/${suite}.xml</suiteXmlFile>
+            <!--suppress UnresolvedMavenProperty -->
+            <suiteXmlFile>src/test/resources/test_suites/${suite}.xml</suiteXmlFile>
           </suiteXmlFiles>
+          <argLine> -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar" </argLine>
         </configuration>
       </plugin>
 

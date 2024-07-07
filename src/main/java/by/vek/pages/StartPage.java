@@ -19,14 +19,18 @@ public class StartPage extends BasePage {
     private WebElement loginBtn;
     @FindBy(xpath = "//button[@name='button']")
     private WebElement closeBtnSaleCode;
+    @FindBy(xpath = "//input[@id='catalogSearch']")
+    private WebElement fieldSearch;
 
     private final String url = "https://www.21vek.by/";
 
     private static final Logger LOGGER = LogManager.getLogger(StartPage.class);
 
+
     public StartPage() {
         PageFactory.initElements(DriverManager.getDriver(), this);
     }
+
 
     public void openURL()  {
         DriverManager.getDriver().get(url);
@@ -50,7 +54,6 @@ public class StartPage extends BasePage {
         }
     }
 
-
     public void openAccountWindow() {
         Waiters.waitElementIsClickable(accountBtn);
         accountBtn.click();
@@ -60,5 +63,12 @@ public class StartPage extends BasePage {
         Waiters.waitElementIsClickable(loginBtn);
         loginBtn.click();
         return new LoginPage();
+    }
+
+    public SearchPage searchByName(String name) {
+        Waiters.waitElementIsClickable(fieldSearch);
+//        fieldSearch.click();
+        fieldSearch.sendKeys(name, Keys.ENTER);
+        return new SearchPage();
     }
 }

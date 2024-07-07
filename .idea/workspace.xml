@@ -5,23 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7c6b3ae-9027-424a-ae58-6a7fd0225b19" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/vek/enums/Capability.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/vek/enums/PropertyFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/vek/service/LoginService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/vek/utils/DriverFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/vek/utils/DriverManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/vek/utils/PropertyReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/Authorization/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/vek/enums/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/vek/pages/CartPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/vek/service/CloseDiscountWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/add_to_cart/AddToCartTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/listeners/ElementActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/listeners/ElementActionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/listeners/TestListneres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/listeners/TestListneres.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/enums/MessageLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/enums/MessageLoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/pages/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/pages/SearchPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/pages/StartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/pages/StartPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/utils/Waiters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/utils/Waiters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/Authorization/UserAuthorizationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/Authorization/UserAuthorizationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/BaseTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/vek/api_test/AuthorizationAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/vek/api_test/AuthorizationAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/authorization/DataProviderLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/authorization/DataProviderLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/authorization/UserAuthorizationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/authorization/UserAuthorizationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/search/SearchProductByNameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/search/SearchProductByNameTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +52,16 @@
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "TestNG.AddToCartTest.verifyAddProductToCart.executor": "Run",
     "TestNG.AuthorizationAPI.postLogin.executor": "Run",
+    "TestNG.AuthorizationAPI.postLoginNotValidEmail.executor": "Run",
+    "TestNG.AuthorizationAPI.postLoginNotValidEmailAndPassword.executor": "Run",
+    "TestNG.AuthorizationAPI.postLoginNotValidPassword.executor": "Run",
+    "TestNG.AuthorizationAPI.postLoginValidDataTest.executor": "Run",
+    "TestNG.CartAPI.addProductToCart.executor": "Run",
+    "TestNG.SearchProductByNameTest.authorizationUser.executor": "Debug",
+    "TestNG.SearchProductByNameTest.verifyAllProductByName.executor": "Run",
+    "TestNG.SearchProductByNameTest.verifyProductByName.executor": "Run",
     "TestNG.UserAuthorization.startTest.executor": "Run",
     "TestNG.UserAuthorizationTest.authorizationUser.executor": "Run",
     "TestNG.UserAuthorizationTest.authorizationUser2.executor": "Run",
@@ -68,21 +75,21 @@
     "TestNG.UserAuthorizationTest.startTest2.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Core/IdeaProjects/selenide_java"
+    "last_opened_file_path": "C:/Users/Core/IdeaProjects/by.21vek"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.UserAuthorizationTest.authorizationUser">
-    <configuration name="UserAuthorizationTest.authorizationUser" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.AddToCartTest.verifyAddProductToCart">
+    <configuration name="AddToCartTest.verifyAddProductToCart" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="by.21vek" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.vek.ui_tests.Authorization.*" />
+          <option name="PATTERN" value="by.vek.ui_tests.add_to_cart.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="by.vek.ui_tests.Authorization" />
-      <option name="MAIN_CLASS_NAME" value="by.vek.ui_tests.Authorization.UserAuthorizationTest" />
-      <option name="METHOD_NAME" value="authorizationUser" />
+      <option name="PACKAGE_NAME" value="by.vek.ui_tests.add_to_cart" />
+      <option name="MAIN_CLASS_NAME" value="by.vek.ui_tests.add_to_cart.AddToCartTest" />
+      <option name="METHOD_NAME" value="verifyAddProductToCart" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -90,17 +97,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserAuthorizationTest.authorizationUserEmailIsNotRegistered" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AuthorizationAPI.postLoginValidDataTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="by.21vek" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.vek.ui_tests.Authorization.*" />
+          <option name="PATTERN" value="by.vek.api_test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="by.vek.ui_tests" />
-      <option name="MAIN_CLASS_NAME" value="by.vek.ui_tests.Authorization.UserAuthorizationTest" />
-      <option name="METHOD_NAME" value="authorizationUserEmailIsNotRegistered" />
+      <option name="PACKAGE_NAME" value="by.vek.api_test" />
+      <option name="MAIN_CLASS_NAME" value="by.vek.api_test.AuthorizationAPI" />
+      <option name="METHOD_NAME" value="postLoginValidDataTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -108,17 +115,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserAuthorizationTest.authorizationUserEmptyData" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchProductByNameTest.verifyAllProductByName" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="by.21vek" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.vek.ui_tests.Authorization.*" />
+          <option name="PATTERN" value="by.vek.ui_tests.search.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="by.vek.ui_tests" />
-      <option name="MAIN_CLASS_NAME" value="by.vek.ui_tests.Authorization.UserAuthorizationTest" />
-      <option name="METHOD_NAME" value="authorizationUserEmptyData" />
+      <option name="PACKAGE_NAME" value="by.vek.ui_tests.search" />
+      <option name="MAIN_CLASS_NAME" value="by.vek.ui_tests.search.SearchProductByNameTest" />
+      <option name="METHOD_NAME" value="verifyAllProductByName" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -126,17 +133,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserAuthorizationTest.authorizationUserEmptyEmail" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchProductByNameTest.verifyProductByName" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="by.21vek" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.vek.ui_tests.Authorization.*" />
+          <option name="PATTERN" value="by.vek.ui_tests.search.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="by.vek.ui_tests.Authorization" />
-      <option name="MAIN_CLASS_NAME" value="by.vek.ui_tests.Authorization.UserAuthorizationTest" />
-      <option name="METHOD_NAME" value="authorizationUserEmptyEmail" />
+      <option name="PACKAGE_NAME" value="by.vek.ui_tests.search" />
+      <option name="MAIN_CLASS_NAME" value="by.vek.ui_tests.search.SearchProductByNameTest" />
+      <option name="METHOD_NAME" value="verifyProductByName" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -144,18 +151,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserAuthorizationTest.authorizationUserEmptyPassword" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserAuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="by.21vek" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="by.vek.ui_tests.Authorization.*" />
+          <option name="PATTERN" value="by.vek.ui_tests.authorization.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="by.vek.ui_tests" />
-      <option name="MAIN_CLASS_NAME" value="by.vek.ui_tests.Authorization.UserAuthorizationTest" />
-      <option name="METHOD_NAME" value="authorizationUserEmptyPassword" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PACKAGE_NAME" value="by.vek.ui_tests.authorization" />
+      <option name="MAIN_CLASS_NAME" value="by.vek.ui_tests.authorization.UserAuthorizationTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -164,11 +170,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UserAuthorizationTest.authorizationUser" />
-        <item itemvalue="TestNG.UserAuthorizationTest.authorizationUserEmptyPassword" />
-        <item itemvalue="TestNG.UserAuthorizationTest.authorizationUserEmptyEmail" />
-        <item itemvalue="TestNG.UserAuthorizationTest.authorizationUserEmailIsNotRegistered" />
-        <item itemvalue="TestNG.UserAuthorizationTest.authorizationUserEmptyData" />
+        <item itemvalue="TestNG.AddToCartTest.verifyAddProductToCart" />
+        <item itemvalue="TestNG.UserAuthorizationTest" />
+        <item itemvalue="TestNG.SearchProductByNameTest.verifyAllProductByName" />
+        <item itemvalue="TestNG.SearchProductByNameTest.verifyProductByName" />
+        <item itemvalue="TestNG.AuthorizationAPI.postLoginValidDataTest" />
       </list>
     </recent_temporary>
   </component>

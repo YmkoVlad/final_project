@@ -1,6 +1,6 @@
 package by.vek.enums;
 
-public enum ErrorMessageLoginPage {
+public enum MessageLoginPage {
     EMAILEMPTY("Электронная почта не указана"),
     PASSWORDEMPTY("Пароль не указан"),
     CHECKEMAIL("Проверьте электронную почту или \nзарегистрируйтесь"),
@@ -8,7 +8,7 @@ public enum ErrorMessageLoginPage {
 
     private String message;
 
-    ErrorMessageLoginPage(String message) {
+    MessageLoginPage(String message) {
         this.message = message;
     }
 

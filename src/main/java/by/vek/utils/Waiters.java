@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class Waiters {
 
@@ -21,7 +22,9 @@ public class Waiters {
         return element;
     }
 
-
-
-
+    public static List<WebElement> waitElementIsVisibleAll(List<WebElement> elements) {
+        new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(10))
+                .until(ExpectedConditions.visibilityOfAllElements(elements));
+        return elements;
+    }
 }

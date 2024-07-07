@@ -34,6 +34,8 @@ public class StartPage extends BasePage {
 
     public void openURL()  {
         DriverManager.getDriver().get(url);
+        Waiters.openURL(url);
+        Waiters.waitElementIsVisible(fieldSearch);
 
         try {
             Waiters.waitElementIsVisible(acceptCookie);

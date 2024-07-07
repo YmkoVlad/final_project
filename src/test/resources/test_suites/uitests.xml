@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name = "UItest" thread-count="2" parallel="methods">
+
+    <test name = "AuthorizationTest">
+        <classes>
+            <class name = "by.vek.ui_tests.authorization.UserAuthorizationTest" />
+        </classes>
+    </test>
+
+    <test name = "SearchProduct">
+        <classes>
+            <class name = "by.vek.ui_tests.search.SearchProductByNameTest" />
+        </classes>
+    </test>
+
+    <test name = "AddToCartTest">
+        <classes>
+            <class name = "by.vek.ui_tests.add_to_cart.AddToCartTest" />
+        </classes>
+    </test>
+
+</suite>

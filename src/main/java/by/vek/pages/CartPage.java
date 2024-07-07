@@ -21,4 +21,9 @@ public class CartPage extends BasePage {
         Waiters.waitElementIsVisibleAll(productTitleInCart);
         return productTitleInCart.get(index).getText();
     }
+
+    public List<String> getProductsNameInCart() {
+        Waiters.waitElementIsVisibleAll(productTitleInCart);
+        return productTitleInCart.stream().map(k -> k.getText()).toList();
+    }
 }

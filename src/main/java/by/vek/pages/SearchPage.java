@@ -23,7 +23,8 @@ public class SearchPage extends BasePage {
     private List<WebElement> resultRoot;
     @FindBy(xpath = "//dl //dd[@class='result__desc ']")
     private List<WebElement> resultDesc;
-
+    @FindBy(xpath = "//*[text() = 'В корзину']")
+    private List<WebElement> addToCartBtn;
 
 
     private static final Logger LOGGER = LogManager.getLogger(SearchPage.class);
@@ -48,9 +49,20 @@ public class SearchPage extends BasePage {
     public void addProductToCart(int index) {
         CloseDiscountWindow closeDiscountWindow = new CloseDiscountWindow();
         closeDiscountWindow.closeWindow();
-//        resultDesc.get(index).findElement(By.xpath(".//button")).click();
-        ((JavascriptExecutor) DriverManager.getDriver()).executeScript("arguments[0].click();",
-                resultDesc.get(index).findElement(By.xpath("//button")));
+        Waiters.waitElementIsVisibleAll(addToCartBtn);
+        addToCartBtn.get(index).click();
+//        ((JavascriptExecutor) DriverManager.getDriver()).executeScript("arguments[0].click();",
+//                resultTest.get(index).findElement(By.xpath("//button")));
+    }
+
+    public void addAllProductToCart() {
+        CloseDiscountWindow closeDiscountWindow = new CloseDiscountWindow();
+        closeDiscountWindow.closeWindow();
+        Waiters.waitElementIsVisibleAll(addToCartBtn);
+        for (WebElement element : addToCartBtn) {
+            Waiters.waitElementIsClickable(element);
+            ((JavascriptExecutor) DriverManager.getDriver()).executeScript("arguments[0].click();", element);
+        }
     }
 
 }

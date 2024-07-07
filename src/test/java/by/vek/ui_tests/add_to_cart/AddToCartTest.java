@@ -9,6 +9,8 @@ import by.vek.utils.Waiters;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class AddToCartTest extends BaseTest {
 
     @Test
@@ -21,7 +23,18 @@ public class AddToCartTest extends BaseTest {
         CartPage cartPage = searchPage.clickCartBtn();
         String productNameOnCartPage = cartPage.getProductTitleInCart(0);
         Assert.assertEquals(productNameOnCartPage, productNameOnSearchPage);
+    }
 
+    @Test
+    public void verifyAddAllProductToCart() {
+        StartPage startPage = new StartPage();
+        startPage.openURL();
+        SearchPage searchPage = startPage.searchByName(Product.SMARTPHONE.getProductName());
+        List<String> productsNameOnSearchPage = searchPage.getProductsName();
+        searchPage.addAllProductToCart();
+        CartPage cartPage = searchPage.clickCartBtn();
+        List<String> productsNameOnCartPage = cartPage.getProductsNameInCart();
+        Assert.assertEquals(productsNameOnCartPage, productsNameOnSearchPage);
     }
 }
 

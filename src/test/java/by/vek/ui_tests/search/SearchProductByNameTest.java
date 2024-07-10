@@ -17,7 +17,9 @@ public class SearchProductByNameTest extends BaseTest {
         startPage.openURL();
         SearchPage searchPage = startPage.searchByName(Product.DENTALFLOSS.getProductName());
         Assert.assertTrue(searchPage.getProductsName().get(0).toLowerCase()
-                .contains(Product.DENTALFLOSS.getProductName().toLowerCase()));
+                .contains(Product.DENTALFLOSS.getProductName().toLowerCase()),
+                "Product description on the Search field are not contains on search page");
+
     }
 
     @Test
@@ -27,7 +29,8 @@ public class SearchProductByNameTest extends BaseTest {
         SearchPage searchPage = startPage.searchByName(Product.PUMP.getProductName());
         SoftAssert softAssert = new SoftAssert();
         for (String productName: searchPage.getProductsName()) {
-           softAssert.assertTrue(productName.toLowerCase().contains(Product.PUMP.getProductName().toLowerCase()));
+           softAssert.assertTrue(productName.toLowerCase().contains(Product.PUMP.getProductName().toLowerCase()),
+                   "Product description on the Search field are not contains on search page");
         }
     }
 }

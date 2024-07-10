@@ -22,7 +22,8 @@ public class AddToCartTest extends BaseTest {
         searchPage.addProductToCart(0);
         CartPage cartPage = searchPage.clickCartBtn();
         String productNameOnCartPage = cartPage.getProductTitleInCart(0);
-        Assert.assertEquals(productNameOnCartPage, productNameOnSearchPage);
+        Assert.assertEquals(productNameOnCartPage, productNameOnSearchPage,
+                "Product descriptions on the SearchPage are not equal CartPage");
     }
 
     @Test
@@ -34,7 +35,8 @@ public class AddToCartTest extends BaseTest {
         searchPage.addAllProductToCart();
         CartPage cartPage = searchPage.clickCartBtn();
         List<String> productsNameOnCartPage = cartPage.getProductsNameInCart();
-        Assert.assertEquals(productsNameOnCartPage, productsNameOnSearchPage);
+        Assert.assertEquals(productsNameOnCartPage, productsNameOnSearchPage,
+                "Products descriptions on the SearchPage are not equal CartPage");
     }
 }
 

@@ -1,5 +1,6 @@
 package by.vek.pages;
 
+import by.vek.utils.ClickUtil;
 import by.vek.utils.DriverManager;
 import by.vek.utils.Waiters;
 import org.apache.logging.log4j.LogManager;
@@ -16,7 +17,7 @@ public class StartPage extends BasePage {
     @FindBy(xpath = "//span[text()='Аккаунт']")
     private WebElement accountBtn;
     @FindBy(xpath = "//div[text()='Принять']")
-    private WebElement acceptCookie;
+    private WebElement acceptBtnCookie;
     @FindBy(xpath = "//button[@data-testid='loginButton']")
     private WebElement loginBtn;
     @FindBy(xpath = "//button[@name='button']")
@@ -38,28 +39,12 @@ public class StartPage extends BasePage {
     }
 
 
-    public void openURL()  {
+    public void openURL() {
         DriverManager.getDriver().get(url);
         Waiters.openURL(url);
         Waiters.waitElementIsVisible(fieldSearch);
-
-        try {
-            Waiters.waitElementIsVisible(acceptCookie);
-            if (acceptCookie.isDisplayed()) {
-                acceptCookie.click();
-            }
-        } catch (NoSuchElementException | TimeoutException e){
-            LOGGER.info("Cookie button is missing");
-        }
-
-        try {
-            Waiters.waitElementIsVisible(closeBtnSaleCode);
-            if (closeBtnSaleCode.isDisplayed()) {
-                closeBtnSaleCode.click();
-            }
-        } catch (NoSuchElementException | TimeoutException e) {
-            LOGGER.info("Close button discount code is missing");
-        }
+        ClickUtil.closeCookieWindow(acceptBtnCookie);
+        ClickUtil.closeDiscountWindow(closeBtnSaleCode);
     }
 
     public void openAccountWindow() {

@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7c6b3ae-9027-424a-ae58-6a7fd0225b19" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/vek/utils/ClickUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/enums/Capability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/enums/Capability.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/enums/MessageLoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/enums/MessageLoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/enums/PropertyFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/enums/PropertyFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/listeners/ElementActionListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/listeners/ElementActionListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/listeners/MethodsTestListneres.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/listeners/MethodsTestListneres.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/pages/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/pages/SearchPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/pages/StartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/pages/StartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/utils/Waiters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/utils/Waiters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/authorization/UserAuthorizationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/authorization/UserAuthorizationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/test_suites/uitests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test_suites/uitests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/service/CloseDiscountWindow.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +78,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.suite_ui">
+  <component name="RunManager" selected="TestNG.SearchProductByNameTest.verifyProductByName">
     <configuration name="AddToCartTest.verifyAddAllProductToCart" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="by.21vek" />
       <shortenClasspath name="NONE" />
@@ -233,9 +228,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AddToCartTest.verifyAddAllProductToCart" />
         <item itemvalue="TestNG.SearchProductByNameTest.verifyProductByName" />
         <item itemvalue="TestNG.UserAuthorizationTest.authorizationUser" />
+        <item itemvalue="TestNG.AddToCartTest.verifyAddAllProductToCart" />
         <item itemvalue="TestNG.AddToCartTest.verifyAddProductToCart" />
         <item itemvalue="TestNG.AuthorizationAPI.postLoginNotValidEmailAndPassword" />
       </list>

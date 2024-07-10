@@ -24,7 +24,6 @@ public class LoginPage extends BasePage {
         PageFactory.initElements(DriverManager.getDriver(), this);
     }
 
-
     public void typeEmailByInputField(String login) {
         Waiters.waitElementIsVisible(emailInputField);
         emailInputField.click();
@@ -73,26 +72,6 @@ public class LoginPage extends BasePage {
             return false;
         }
     }
-
-//    public Boolean verifyPresentWebElementPasswordErrorMessage() {
-//        try {
-//            driver.findElement(By.cssSelector("div[class='FieldWrapper-module__wrapper'] .ErrorMessage-module__message"));
-//            return true;
-//        } catch (NoSuchElementException e) {
-//            return false;
-//        }
-//    }
-
-
-
-//    public Boolean getErrorMessage(String emailMessage, String passwordMessage) {
-//        Waiters.waitElementIsVisible(emailErrorMessage);
-//        Waiters.waitElementIsVisible(passwordErrorMessage);
-//        String emaailString = emailErrorMessage.getText();
-//        String passwordString = passwordErrorMessage.getText();
-//        return emaailString.equals(emailMessage) & passwordString.equals(passwordMessage);
-//    }
-
 
 }
 

@@ -1,7 +1,7 @@
 package by.vek.pages;
 
 
-import by.vek.service.CloseDiscountWindow;
+import by.vek.utils.ClickUtil;
 import by.vek.utils.DriverManager;
 import by.vek.utils.Waiters;
 import org.apache.logging.log4j.LogManager;
@@ -14,7 +14,6 @@ import java.util.List;
 
 public class SearchPage extends BasePage {
 
-
     @FindBy(xpath = "//span[@class='result__name']")
     private List<WebElement> nameOfProducts;
     @FindBy(xpath = "//a[@class='headerCartBox']")
@@ -25,15 +24,14 @@ public class SearchPage extends BasePage {
     private List<WebElement> resultDesc;
     @FindBy(xpath = "//*[text() = 'В корзину']")
     private List<WebElement> addToCartBtn;
-
+    @FindBy(xpath = "//button[@name='button']")
+    private WebElement closeBtnSaleCode;
 
     private static final Logger LOGGER = LogManager.getLogger(SearchPage.class);
-
 
     public SearchPage() {
         PageFactory.initElements(DriverManager.getDriver(), this);
     }
-
 
     public List<String> getProductsName() {
         Waiters.waitElementIsVisibleAll(nameOfProducts);
@@ -47,17 +45,13 @@ public class SearchPage extends BasePage {
     }
 
     public void addProductToCart(int index) {
-        CloseDiscountWindow closeDiscountWindow = new CloseDiscountWindow();
-        closeDiscountWindow.closeWindow();
+        ClickUtil.closeDiscountWindow(closeBtnSaleCode);
         Waiters.waitElementIsVisibleAll(addToCartBtn);
         addToCartBtn.get(index).click();
-//        ((JavascriptExecutor) DriverManager.getDriver()).executeScript("arguments[0].click();",
-//                resultTest.get(index).findElement(By.xpath("//button")));
     }
 
     public void addAllProductToCart() {
-        CloseDiscountWindow closeDiscountWindow = new CloseDiscountWindow();
-        closeDiscountWindow.closeWindow();
+        ClickUtil.closeDiscountWindow(closeBtnSaleCode);
         Waiters.waitElementIsVisibleAll(addToCartBtn);
         for (WebElement element : addToCartBtn) {
             Waiters.waitElementIsClickable(element);

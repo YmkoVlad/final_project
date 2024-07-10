@@ -8,6 +8,8 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.time.Duration;
+
 
 public class StartPage extends BasePage {
 
@@ -21,6 +23,10 @@ public class StartPage extends BasePage {
     private WebElement closeBtnSaleCode;
     @FindBy(xpath = "//input[@id='catalogSearch']")
     private WebElement fieldSearch;
+    @FindBy(xpath = "//span[@class='userToolsSubtitle']")
+    private WebElement fieldUserEmail;
+
+    //button[@class='styles_userToolsToggler__c2aHe']
 
     private final String url = "https://www.21vek.by/";
 
@@ -69,8 +75,20 @@ public class StartPage extends BasePage {
 
     public SearchPage searchByName(String name) {
         Waiters.waitElementIsClickable(fieldSearch);
-//        fieldSearch.click();
         fieldSearch.sendKeys(name, Keys.ENTER);
         return new SearchPage();
+    }
+
+    public String getUserEmail() {
+        DriverManager.getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
+        Waiters.waitElementIsClickable(accountBtn);
+        try {
+            accountBtn.click();
+        } catch (StaleElementReferenceException e) {
+            Waiters.waitElementIsClickable(accountBtn);
+            accountBtn.click();
+        }
+        Waiters.waitElementIsVisible(fieldUserEmail);
+        return fieldUserEmail.getText();
     }
 }

@@ -4,6 +4,8 @@ import by.vek.pages.LoginPage;
 import by.vek.pages.StartPage;
 import by.vek.service.LoginService;
 import by.vek.ui_tests.BaseTest;
+import by.vek.utils.Waiters;
+import org.openxmlformats.schemas.drawingml.x2006.main.ThemeDocument;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -18,7 +20,9 @@ public class UserAuthorizationTest extends BaseTest {
         LoginPage loginPage = startPage.clickByLoginBtn();
         loginPage.typeEmailByInputField("Kukharevich.vlad@gmail.com");
         loginPage.typePasswordByInputField("19ae43ba");
-        loginPage.clickBySubmitBtn();
+        startPage = loginPage.clickBySubmitBtn();
+        String emailUser = startPage.getUserEmail();
+        Assert.assertEquals(emailUser, "kukharevich.vlad@gmail.com");
     }
 
 

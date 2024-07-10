@@ -1,6 +1,7 @@
 package by.vek.enums;
 
 public enum PropertyFile {
+
     CONFIG("config.properties");
 
     private String pathToFile;

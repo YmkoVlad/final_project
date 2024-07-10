@@ -1,6 +1,7 @@
 package by.vek.enums;
 
 public enum Capability {
+
     BROWSER("browser", "chrome");
 
     private String key;

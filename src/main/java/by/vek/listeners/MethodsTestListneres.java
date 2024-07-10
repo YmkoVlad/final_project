@@ -7,6 +7,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 public class MethodsTestListneres implements ITestListener {
+
     private static final Logger LOGGER = LogManager.getLogger(MethodsTestListneres.class);
 
     @Override

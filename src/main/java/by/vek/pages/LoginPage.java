@@ -6,7 +6,6 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static org.testng.Assert.assertEquals;
 
 public class LoginPage extends BasePage {
 
@@ -48,7 +47,6 @@ public class LoginPage extends BasePage {
     public Boolean isEmailErrorMessageEqual(String emailMessage) {
         Waiters.waitElementIsVisible(emailErrorMessage);
         String emaailString = emailErrorMessage.getText();
-        System.out.println(emailErrorMessage.getText());
         return emaailString.equals(emailMessage);
     }
 

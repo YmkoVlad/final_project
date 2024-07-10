@@ -1,6 +1,7 @@
 package by.vek.enums;
 
 public enum MessageLoginPage {
+
     EMAILEMPTY("Электронная почта не указана"),
     PASSWORDEMPTY("Пароль не указан"),
     CHECKEMAIL("Проверьте электронную почту или \nзарегистрируйтесь"),

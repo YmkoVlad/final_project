@@ -23,13 +23,18 @@ public class Waiters {
     }
 
     public static List<WebElement> waitElementIsVisibleAll(List<WebElement> elements) {
-        new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(20))
+        new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(15))
                 .until(ExpectedConditions.visibilityOfAllElements(elements));
         return elements;
     }
 
     public static void openURL(String url) {
-        new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(20))
+        new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(15))
                 .until(ExpectedConditions.urlContains(url));
     }
+
+
+
+
+
 }

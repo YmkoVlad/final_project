@@ -7,6 +7,7 @@ public enum MessageLoginPage {
     CHECKEMAIL("Проверьте электронную почту или \nзарегистрируйтесь"),
     WRONGPASSWORD("Неправильный пароль. \nСбросить пароль?");
 
+
     private String message;
 
     MessageLoginPage(String message) {

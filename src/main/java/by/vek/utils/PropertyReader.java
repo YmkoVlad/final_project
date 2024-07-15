@@ -3,7 +3,6 @@ package by.vek.utils;
 import by.vek.enums.Capability;
 import by.vek.enums.PropertyFile;
 import org.apache.commons.lang3.StringUtils;
-
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;

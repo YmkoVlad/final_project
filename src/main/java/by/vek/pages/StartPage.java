@@ -8,11 +8,10 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import java.time.Duration;
 
 
-public class StartPage extends BasePage {
+public class StartPage {
 
     @FindBy(xpath = "//span[text()='Аккаунт']")
     private WebElement accountBtn;
@@ -27,7 +26,6 @@ public class StartPage extends BasePage {
     @FindBy(xpath = "//span[@class='userToolsSubtitle']")
     private WebElement fieldUserEmail;
 
-    //button[@class='styles_userToolsToggler__c2aHe']
 
     private final String url = "https://www.21vek.by/";
 

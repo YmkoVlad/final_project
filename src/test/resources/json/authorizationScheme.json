@@ -15,7 +15,19 @@
           "type": "string"
         },
         "phone": {
-          "type": "null"
+          "type": "object",
+          "properties": {
+            "phone": {
+              "type": "string"
+            },
+            "confirmed": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "phone",
+            "confirmed"
+          ]
         },
         "name": {
           "type": "string"

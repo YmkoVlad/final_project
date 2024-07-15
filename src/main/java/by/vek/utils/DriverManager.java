@@ -4,7 +4,6 @@ import by.vek.enums.Capability;
 import by.vek.listeners.ElementActionListener;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.events.EventFiringDecorator;
-
 import java.time.Duration;
 
 public class DriverManager {
@@ -18,8 +17,8 @@ public class DriverManager {
             EventFiringDecorator<WebDriver> decorator = new EventFiringDecorator(new ElementActionListener());
             driver = decorator.decorate(driver);
             driver.manage().window().maximize();
-            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+            driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
             localDriver.set(driver);
             return driver;
         } else {

@@ -5,10 +5,9 @@ import by.vek.utils.Waiters;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import java.util.List;
 
-public class CartPage extends BasePage {
+public class CartPage {
 
     @FindBy(xpath = "//a[@class='BasketItem_title__MzCQ9']")
     private List<WebElement> productTitleInCart;

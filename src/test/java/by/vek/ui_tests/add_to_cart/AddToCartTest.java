@@ -1,11 +1,11 @@
 package by.vek.ui_tests.add_to_cart;
 
 import by.vek.enums.Product;
+import by.vek.enums.ProductIndex;
 import by.vek.pages.CartPage;
 import by.vek.pages.SearchPage;
 import by.vek.pages.StartPage;
 import by.vek.ui_tests.BaseTest;
-import by.vek.utils.Waiters;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -18,10 +18,10 @@ public class AddToCartTest extends BaseTest {
         StartPage startPage = new StartPage();
         startPage.openURL();
         SearchPage searchPage = startPage.searchByName(Product.SMARTPHONE.getProductName());
-        String productNameOnSearchPage = searchPage.getProductsName().get(0);
+        String productNameOnSearchPage = searchPage.getProductsName().get(ProductIndex.PRODUCTINDEXINCART.getIndex());
         searchPage.addProductToCart(0);
         CartPage cartPage = searchPage.clickCartBtn();
-        String productNameOnCartPage = cartPage.getProductTitleInCart(0);
+        String productNameOnCartPage = cartPage.getProductTitleInCart(ProductIndex.PRODUCTINDEXINCART.getIndex());
         Assert.assertEquals(productNameOnCartPage, productNameOnSearchPage,
                 "Product descriptions on the SearchPage are not equal CartPage");
     }

@@ -8,8 +8,8 @@ import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 import java.io.File;
+
 
 import static io.restassured.RestAssured.given;
 
@@ -34,6 +34,7 @@ public class AuthorizationAPI {
                 .extract().response();
         Assert.assertEquals(response.getStatusCode(), 200, "Status code != 200");
     }
+
 
     @Test
     public void postLoginNotValidEmail() {
@@ -79,6 +80,18 @@ public class AuthorizationAPI {
         JsonPath jsonPath = response.jsonPath();
         String error = jsonPath.get("error");
         Assert.assertEquals(error, ErrorMesageAPI.CHECKEMAIL.getMessage(), "Error message not equals expected result");
+    }
+
+    @Test
+    public void postLoginEmptyDataUser() {
+        File notValidUser = new File("src/test/resources/json/emptyDataUser.json");
+        Response response = given().log().all()
+                .header("content-type", "application/json")
+                .header("accept", "application/json;version=1.1")
+                .body(notValidUser)
+                .when().post("users/action/login/")
+                .then().log().all().extract().response();
+        Assert.assertEquals(response.getStatusCode(), 404, "Status code != 404");
     }
 
 }

@@ -9,10 +9,9 @@ import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import java.util.List;
 
-public class SearchPage extends BasePage {
+public class SearchPage {
 
     @FindBy(xpath = "//span[@class='result__name']")
     private List<WebElement> nameOfProducts;
@@ -34,13 +33,14 @@ public class SearchPage extends BasePage {
     }
 
     public List<String> getProductsName() {
+        ClickUtil.closeDiscountWindow(closeBtnSaleCode);
         Waiters.waitElementIsVisibleAll(nameOfProducts);
         return nameOfProducts.stream().map(k -> k.getText()).toList();
     }
 
     public CartPage clickCartBtn() {
         Waiters.waitElementIsClickable(cartButton);
-        cartButton.click();
+        ((JavascriptExecutor) DriverManager.getDriver()).executeScript("arguments[0].click();", cartButton);
         return new CartPage();
     }
 
@@ -51,8 +51,8 @@ public class SearchPage extends BasePage {
     }
 
     public void addAllProductToCart() {
-        ClickUtil.closeDiscountWindow(closeBtnSaleCode);
         Waiters.waitElementIsVisibleAll(addToCartBtn);
+        ClickUtil.closeDiscountWindow(closeBtnSaleCode);
         for (WebElement element : addToCartBtn) {
             Waiters.waitElementIsClickable(element);
             ((JavascriptExecutor) DriverManager.getDriver()).executeScript("arguments[0].click();", element);

@@ -1,6 +1,7 @@
 package by.vek.ui_tests.search;
 
 import by.vek.enums.Product;
+import by.vek.enums.ProductIndex;
 import by.vek.pages.SearchPage;
 import by.vek.pages.StartPage;
 import by.vek.ui_tests.BaseTest;
@@ -16,7 +17,7 @@ public class SearchProductByNameTest extends BaseTest {
         StartPage startPage = new StartPage();
         startPage.openURL();
         SearchPage searchPage = startPage.searchByName(Product.DENTALFLOSS.getProductName());
-        Assert.assertTrue(searchPage.getProductsName().get(0).toLowerCase()
+        Assert.assertTrue(searchPage.getProductsName().get(ProductIndex.PRODUCTINDEXINPAGE.getIndex()).toLowerCase()
                 .contains(Product.DENTALFLOSS.getProductName().toLowerCase()),
                 "Product description on the Search field are not contains on search page");
 

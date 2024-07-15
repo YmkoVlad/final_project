@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7c6b3ae-9027-424a-ae58-6a7fd0225b19" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/vek/enums/ProductIndex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/json/emptyDataUser.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/pages/BasePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/pages/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/pages/CartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/pages/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/pages/SearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/pages/StartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/pages/StartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/utils/DriverManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/utils/DriverManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/utils/PropertyReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/utils/PropertyReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/vek/utils/Waiters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/vek/utils/Waiters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/vek/api_test/AuthorizationAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/vek/api_test/AuthorizationAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/add_to_cart/AddToCartTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/add_to_cart/AddToCartTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/search/SearchProductByNameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/vek/ui_tests/search/SearchProductByNameTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/json/authorizationScheme.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/json/authorizationScheme.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
